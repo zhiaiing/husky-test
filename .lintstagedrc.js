@@ -20,6 +20,5 @@ export default {
         const filesToLint = await removeIgnoredFiles(files, rootEslintCli);
         return [`eslint --fix --cache ${filesToLint}`]
     },
-    // "**/*.less": "stylelint --custom-syntax postcss-less",
      "**/*.(vue|scss|css)": "stylelint --fix"
 }

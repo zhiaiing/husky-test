@@ -34,5 +34,6 @@ import HelloWorld from './components/HelloWorld.vue'
 }
 .name {
   display: block;
+  font-size: 20px;
 }
 </style>
