@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-console.log("window", window.aa)
+console.log("window", window.aa1)
 </script>
 
 <template>
