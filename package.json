@@ -8,13 +8,17 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "lint": "npm run tsc && npm run eslint && npm run stylelint"
+    "tsc": "vue-tsc",
+    "lint": "npm run tsc && lint-staged",
+    "lint-staged": "lint-staged",
+    "eslint": "eslint --ext .vue,.ts src/ --fix"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.13.0",
-    "eslint": "^9.5.0",
+    "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
+    "node-filter-async": "^3.0.0",
     "stylelint": "^16.6.1",
     "vue": "^3.4.21"
   },
@@ -29,11 +33,5 @@
       "pre-commit": "lint-staged",
       "commit-msg": "node scripts/verify-commit-msg.js"
     }
-  },
-  "lint-staged": {
-    "*.{js,ts,vue}": [
-      "npm run lint",
-      "git add"
-    ]
   }
 }

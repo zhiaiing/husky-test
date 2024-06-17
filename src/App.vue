@@ -1,6 +1,10 @@
 <script setup lang="ts">
+// defineProps<{}>
+
 import HelloWorld from './components/HelloWorld.vue'
-console.log("window", window.aa1)
+// console.log("window", window.aa1)
+
+
 </script>
 
 <template>
@@ -27,5 +31,8 @@ console.log("window", window.aa1)
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+.name {
+  display: block;
 }
 </style>
