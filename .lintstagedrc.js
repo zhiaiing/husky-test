@@ -17,9 +17,9 @@ const removeIgnoredFiles = async (files, eslintCli) => {
 
 export default {
     'src/**/*.{ts,vue,js,jsx}': async (files) => {
-        console.log("########### ", files)
         const filesToLint = await removeIgnoredFiles(files, rootEslintCli);
+        console.log("###### ", filesToLint);
         return [`eslint --fix --cache ${filesToLint}`]
     },
-     "src/**/*.(vue|scss|css)": "stylelint --fix"
+    //  "src/**/*.(vue|scss|css)": "stylelint --fix"
 }

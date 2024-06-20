@@ -1,9 +1,11 @@
 <script setup lang="ts">
 // defineProps<{}>
 
+import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue'
 // console.log("window", window.aa1)
 
+const value = ref(1);
 
 </script>
 
@@ -14,6 +16,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      <div>{{ value }}</div>
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
